@@ -2661,6 +2661,7 @@ GameObject:
   - component: {fileID: 1796350817}
   - component: {fileID: 1796350816}
   - component: {fileID: 1796350815}
+  - component: {fileID: 1796350819}
   m_Layer: 4
   m_Name: Water Cube
   m_TagString: Untagged
@@ -2676,7 +2677,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1796350813}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -21.9, y: 2.41, z: -14.57}
+  m_LocalPosition: {x: -21.9, y: 2.41, z: -16.92}
   m_LocalScale: {x: 6.3222, y: 6.3222, z: 6.3222}
   m_Children: []
   m_Father: {fileID: 2078183454}
@@ -2741,6 +2742,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1796350813}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1796350819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1796350813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6638f1232da7fc4cbdc25ce80c92459, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 4}
+  distance: 4
 --- !u!1001 &1869734195
 PrefabInstance:
   m_ObjectHideFlags: 0

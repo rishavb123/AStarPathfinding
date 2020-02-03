@@ -8,6 +8,8 @@ public class Algorithm : MonoBehaviour
     public Transform player;
     public Transform target;
 
+    public Vector3 lastTargetPosition;
+
     public float speed;
     
     bool firstTime;
@@ -29,7 +31,13 @@ public class Algorithm : MonoBehaviour
      */
     void Update()
     {
-        grid.path = calculatePath(player.position, target.position);
+        if (grid.getNode(target.position).walkable)
+        {
+            grid.path = calculatePath(player.position, target.position);
+            lastTargetPosition = target.position;
+        }
+        else
+            grid.path = calculatePath(player.position, lastTargetPosition);
 
         if (grid.path.Count > 0)
         {

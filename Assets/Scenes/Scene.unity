@@ -2085,7 +2085,7 @@ MonoBehaviour:
   waterMask:
     serializedVersion: 2
     m_Bits: 16
-  nodeHalfWidth: 0.5
+  nodeHalfWidth: 0.4
   totalSize: {x: 50, y: 50}
   showPath: 0
   drawGizmos: 1
@@ -2103,7 +2103,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 281793832}
   target: {fileID: 910446932}
-  speed: 3
+  lastTargetPosition: {x: 0, y: 0, z: 0}
+  speed: 4
 --- !u!1 &1342685014
 GameObject:
   m_ObjectHideFlags: 0

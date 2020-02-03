@@ -17,6 +17,8 @@ public class Algorithm : MonoBehaviour
     Grid grid;
     private float maxSpeed;
 
+    private Quaternion fixedRotation;
+
     /*
      * Setting up variables
      */
@@ -47,6 +49,7 @@ public class Algorithm : MonoBehaviour
             Vector3 newPosition = Vector3.MoveTowards(player.position, grid.path[0].worldPosition, Time.deltaTime * speed / (float) weight);
             //Vector3 oldRotation = player.rotation.eulerAngles;
             player.LookAt(newPosition);
+            fixedRotation = player.rotation;
             //player.rotation = Quaternion.Euler(0.1f * player.rotation.eulerAngles + 0.9f * oldRotation);
             //player.rotation = Quaternion.Euler(Vector3.MoveTowards(oldRotation, player.rotation.eulerAngles, Time.deltaTime * speed * 10));
             //player.rotation = Quaternion.Euler(Vector3.MoveTowards(oldRotation, player.rotation.eulerAngles, Time.deltaTime * speed * 100));
